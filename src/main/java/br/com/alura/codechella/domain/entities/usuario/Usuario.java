@@ -31,6 +31,8 @@ public class Usuario {
         this.email = email;
     }
 
+    public Usuario(){}
+
     public String getCpf() {
         return cpf;
     }
