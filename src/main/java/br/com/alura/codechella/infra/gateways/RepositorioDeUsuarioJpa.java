@@ -26,7 +26,8 @@ public class RepositorioDeUsuarioJpa implements RepositorioDeUsuario {
 
     @Override
     public List<Usuario> listarTodos() {
-//        return repositorio.findAll();
-        return null;
+        return repositorio.findAll().stream()
+                .map(mapper::toDomain)
+                .toList();
     }
 }
